@@ -16,15 +16,15 @@ class Category(SQLModel, table=True):
     productos: List["Product"] = Relationship(back_populates="categoria")
 
 
-class Tag(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
-    nombre: str
-    productos: List["Product"] = Relationship(back_populates="tags", link_model="ProductTag")
-
-
 class ProductTag(SQLModel, table=True):
     product_id: Optional[int] = Field(default=None, foreign_key="product.id", primary_key=True)
     tag_id: Optional[int] = Field(default=None, foreign_key="tag.id", primary_key=True)
+
+
+class Tag(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    nombre: str
+    productos: List["Product"] = Relationship(back_populates="tags", link_model=ProductTag)
 
 
 class Product(SQLModel, table=True):
