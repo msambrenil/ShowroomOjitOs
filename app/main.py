@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from app.database import init_db
-from app.routers import products, clients, sales, users, categories
+from app.routers import products, clients, sales, users, categories, tags
 
 app = FastAPI(title="Showroom Natura OjitOs")
 
@@ -24,6 +24,7 @@ app.include_router(clients.router)
 app.include_router(sales.router)
 app.include_router(users.router)
 app.include_router(categories.router)
+app.include_router(tags.router)
 
 
 @app.on_event("startup")
