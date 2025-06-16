@@ -7,6 +7,7 @@ Pequeña web app construida con FastAPI para la gestión de productos, clientes 
 
 - Python 3.10+
 - [Visual Studio Code](https://code.visualstudio.com/) en Windows
+- Jinja2 (se instala con `pip install -r requirements.txt`)
 
 Instala las dependencias dentro de un entorno virtual:
 
