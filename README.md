@@ -25,3 +25,5 @@ python -m uvicorn app.main:app --reload
 ```
 
 La API estará disponible en `http://localhost:8000/`.
+
+Los archivos estáticos (CSS, imágenes, JS) se cargan desde el directorio `static/`. Asegúrate de mantenerlo presente para evitar errores al iniciar la aplicación.
